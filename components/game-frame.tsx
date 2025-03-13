@@ -67,13 +67,13 @@ export default function GameFrame({
         <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none mix-blend-overlay rounded-2xl"></div>
 
         {/* Sound toggle */}
-        <button
+        {/* <button
           onClick={() => setSound(!sound)}
           className="absolute top-1 right-1 sm:top-2 sm:right-2 md:top-4 md:right-4 text-[#7ad0c0]/50 hover:text-[#7ad0c0] z-10 p-1"
           aria-label={sound ? "Mute sound" : "Enable sound"}
         >
           {sound ? <Volume2 className="w-3 h-3 sm:w-4 sm:h-4" /> : <VolumeX className="w-3 h-3 sm:w-4 sm:h-4" />}
-        </button>
+        </button> */}
 
         {/* Main screen area */}
         <div
