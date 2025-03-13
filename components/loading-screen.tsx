@@ -92,9 +92,9 @@ export default function LoadingScreen({ onLoadComplete, minLoadTime = 4000 }: Lo
       <div className="w-full h-[62vh] flex flex-col items-center justify-center px-4 sm:px-6">
         
         <div className="mb-8 text-center">
-          <h1 className="text-2xl md:text-3xl font-bold pixelated text-[#7ad0c0] mb-2">PORTFOLIO-BOY</h1>
+          <h1 className="text-2xl md:text-3xl font-bold pixelated text-[#7ad0c0] mb-2">YOUSSIF ALASHRY</h1>
           <div className="text-xs text-[#7ad0c0]/70 mb-1">VERSION 1.0.4</div>
-          <div className="text-xs text-[#7ad0c0]/70">© 2025 RETRO GAMES INC.</div>
+          {/* <div className="text-xs text-[#7ad0c0]/70">© 2025 RETRO GAMES INC.</div> */}
         </div>
 
         <div className="space-y-6 w-full max-w-md">
