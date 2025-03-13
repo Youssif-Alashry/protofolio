@@ -89,7 +89,7 @@ export default function LoadingScreen({ onLoadComplete, minLoadTime = 4000 }: Lo
 
   return (
     <GameFrame title="SYSTEM BOOT" level={0} score={0} health={100} mana={100} backLink="/" hideHeader={true}>
-      <div className="w-full h-[58vh] flex flex-col items-center justify-center px-4 sm:px-6">
+      <div className="w-full h-[62vh] flex flex-col items-center justify-center px-4 sm:px-6">
         
         <div className="mb-8 text-center">
           <h1 className="text-2xl md:text-3xl font-bold pixelated text-[#7ad0c0] mb-2">PORTFOLIO-BOY</h1>
