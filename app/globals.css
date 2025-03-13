@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 30% 5%;
+    --foreground: 160 40% 70%;
+
+    --card: 160 30% 5%;
+    --card-foreground: 160 40% 70%;
+
+    --popover: 160 30% 5%;
+    --popover-foreground: 160 40% 70%;
+
+    --primary: 160 40% 70%;
+    --primary-foreground: 160 30% 5%;
+
+    --secondary: 160 30% 30%;
+    --secondary-foreground: 160 40% 70%;
+
+    --muted: 160 20% 20%;
+    --muted-foreground: 160 30% 60%;
+
+    --accent: 160 30% 30%;
+    --accent-foreground: 160 40% 70%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 160 40% 70%;
+
+    --border: 160 40% 70%;
+    --input: 160 40% 70%;
+    --ring: 160 40% 70%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .pixelated {
+    font-family: monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    image-rendering: pixelated;
+  }
+
+  .blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .screen-flicker {
+    animation: flicker 0.15s steps(1) forwards;
+  }
+
+  @keyframes flicker {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    75% {
+      opacity: 0.9;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .battery-indicator {
+    width: 20px;
+    height: 10px;
+    border: 1px solid #7ad0c0;
+    position: relative;
+    padding: 1px;
+    display: flex;
+  }
+
+  .battery-indicator:after {
+    content: "";
+    position: absolute;
+    right: -3px;
+    top: 2px;
+    width: 2px;
+    height: 6px;
+    background: #7ad0c0;
+  }
+
+  .achievement {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #7ad0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 50, 45, 0.5);
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(to right, rgba(122, 208, 192, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(122, 208, 192, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .bg-grid-small {
+    background-image: linear-gradient(to right, rgba(122, 208, 192, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(122, 208, 192, 0.1) 1px, transparent 1px);
+    background-size: 10px 10px;
+  }
+
+  .circuit-pattern {
+    background-image: radial-gradient(circle, rgba(122, 208, 192, 0.2) 1px, transparent 1px),
+      linear-gradient(to right, rgba(122, 208, 192, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(122, 208, 192, 0.1) 1px, transparent 1px);
+    background-size: 8px 8px, 16px 16px, 16px 16px;
+    background-position: 0 0, 0 0, 0 0;
+  }
+}
+
+/* Custom LCD font effect */
+@font-face {
+  font-family: "LCD";
+  src: local("Courier New");
+  font-display: swap;
+}
+
+.font-mono {
+  font-family: "LCD", monospace;
+  letter-spacing: 0.05em;
+}
+
